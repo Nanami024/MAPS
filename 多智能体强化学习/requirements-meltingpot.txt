@@ -1,0 +1,3 @@
+-r requirements.txt
+dm-meltingpot==2.4.0
+

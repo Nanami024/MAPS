@@ -1,0 +1,30 @@
+{
+  "seed": 7,
+  "episodes": 600,
+  "log_every": 25,
+  "checkpoint_every": 100,
+  "environment": {
+    "kind": "toy",
+    "horizon": 28,
+    "num_actions": 4,
+    "train_partners": ["leader", "follower", "alternator", "reciprocator"],
+    "eval_partners": ["noisy_leader", "delayed_follower", "contrarian"]
+  },
+  "algorithm": {
+    "num_roles": 4,
+    "context_dim": 10,
+    "context_decay": 0.78,
+    "gamma": 0.96,
+    "actor_lr": 0.018,
+    "critic_lr": 0.035,
+    "entropy_coef": 0.004,
+    "diversity_coef": 0.012,
+    "influence_coef": 0.025,
+    "gradient_clip": 5.0
+  },
+  "evaluation": {
+    "episodes": 120,
+    "deterministic": true
+  }
+}
+

@@ -1,0 +1,34 @@
+{
+  "seed": 7,
+  "episodes": 2000,
+  "log_every": 10,
+  "checkpoint_every": 100,
+  "environment": {
+    "kind": "meltingpot_substrate",
+    "names": [
+      "collaborative_cooking__cramped",
+      "collaborative_cooking__circuit",
+      "collaborative_cooking__ring"
+    ],
+    "observation_keys": ["RGB", "COLLECTIVE_REWARD"],
+    "rgb_size": 10,
+    "max_steps": 1000
+  },
+  "algorithm": {
+    "num_roles": 6,
+    "context_dim": 16,
+    "context_decay": 0.90,
+    "gamma": 0.99,
+    "actor_lr": 0.0015,
+    "critic_lr": 0.003,
+    "entropy_coef": 0.002,
+    "diversity_coef": 0.006,
+    "influence_coef": 0.01,
+    "gradient_clip": 2.0
+  },
+  "evaluation": {
+    "episodes": 100,
+    "deterministic": true
+  }
+}
+
